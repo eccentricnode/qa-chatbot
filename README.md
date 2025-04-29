@@ -59,8 +59,6 @@ os.environ["TRANSFORMERS_CACHE"] = "./models"
   curl http://localhost:9000/health
   ```
 
----
-
 ## Upload a PDF
 
 ```bash
