@@ -45,7 +45,7 @@ qdrant_client = QdrantClient(
     port=int(os.getenv("QDRANT_PORT", "6333")),
 )
 EMBEDDINGS_SERVICE_URL = os.getenv("EMBEDDINGS_SERVICE_URL", "http://localhost:8080")
-LOCALAI_URL = os.getenv("LOCALAI_URL", "http://localhost:8080/v1")
+LOCALAI_URL = os.getenv("LOCALAI_URL", "http://localhost:8081/v1")
 
 
 class QuestionRequest(BaseModel):

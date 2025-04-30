@@ -39,7 +39,7 @@ os.environ["TRANSFORMERS_CACHE"] = "./models"
 ### 5. Run the Servers
 - Start the embeddings server:
   ```bash
-  python embeddings_server.py
+  python3 embeddings_server.py
   ```
   This will run the server on `http://localhost:8080`.
 

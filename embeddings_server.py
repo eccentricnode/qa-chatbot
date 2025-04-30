@@ -6,8 +6,7 @@ from typing import List
 import os
 from starlette.status import HTTP_503_SERVICE_UNAVAILABLE
 
-# Set cache directory to match Docker volume mount path
-os.environ["TRANSFORMERS_CACHE"] = "/models"
+os.environ["TRANSFORMERS_CACHE"] = "./models"
 
 app = FastAPI(title="Embeddings API")
 
@@ -19,7 +18,7 @@ try:
     # HuggingFaceEmbeddings will automatically handle model downloading and caching
     embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
-        cache_folder="/models",  # This matches our volume mount
+        cache_folder="./models",  # This matches our volume mount
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True},
     )
