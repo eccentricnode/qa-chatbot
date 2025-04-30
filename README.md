@@ -1,5 +1,3 @@
-# PDF API
-
 ### 1. Install Python 3.12
 Ensure Python 3.12 is installed on your system. Check the version:
 ```bash
