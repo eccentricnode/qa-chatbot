@@ -1,5 +1,5 @@
 venv/
-models
 .vscode/
 __pycache__/
 qdrant_storage/
+models/
