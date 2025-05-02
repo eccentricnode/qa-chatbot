@@ -5,7 +5,6 @@ import uvicorn
 from typing import List
 import os
 from starlette.status import HTTP_503_SERVICE_UNAVAILABLE
-import subprocess
 
 os.environ["TRANSFORMERS_CACHE"] = "./models"
 
@@ -68,4 +67,4 @@ async def health_check():
 
 
 if __name__ == "__main__":
-        uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8080)
