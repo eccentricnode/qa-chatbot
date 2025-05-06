@@ -3,11 +3,6 @@ Ensure Python 3.12 is installed on your system. Check the version:
 ```bash
 python3 --version
 ```
-If it's not installed, you can install it using:
-```bash
-sudo apt update
-sudo apt install python3.12 python3.12-venv python3.12-distutils
-```
 
 ### 2. Set Up a Virtual Environment
 Create and activate a virtual environment:
@@ -27,11 +22,6 @@ pip install -r pdf_qa_requirements.txt
 Create the cache directory for Hugging Face models:
 ```bash
 mkdir -p /models
-```
-
-If you prefer to use a local directory, update the `TRANSFORMERS_CACHE` environment variable in `embeddings_server.py`:
-```python
-os.environ["TRANSFORMERS_CACHE"] = "./models"
 ```
 
 ### 5. Run the Servers
