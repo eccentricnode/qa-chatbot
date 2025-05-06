@@ -4,38 +4,30 @@ Ensure Python 3.12 is installed on your system. Check the version:
 python3 --version
 ```
 If it's not installed, you can install it using:
-  **create instructions to install :) **
-
-### 2. 
-
-### 3. Install Script to spin up the Model Workspace
-Run the following command to set up the project and download the required model:
 ```bash
-make setup
+sudo apt update
+sudo apt install python3.12 python3.12-venv python3.12-distutils
 ```
 
-### 4. Or Install Dependencies Individually
+### 2. Set Up a Virtual Environment
 Create and activate a virtual environment:
 ```bash
 python3.12 -m venv venv
 source venv/bin/activate
 ```
+
+### 3. Install Dependencies
 Install the required Python packages:
 ```bash
 pip install -r embeddings_server_requirements.txt
 pip install -r pdf_qa_requirements.txt
 ```
-#### Set Up the Cache Directory
+
+### 4. Set Up the Cache Directory
 Create the cache directory for Hugging Face models:
 ```bash
 mkdir -p /models
 ```
-#### Download the Required Model
-Run the following command to download the required Hugging Face model:
-```bash
-python download_model.py
-```
-
 
 If you prefer to use a local directory, update the `TRANSFORMERS_CACHE` environment variable in `embeddings_server.py`:
 ```python
@@ -70,6 +62,8 @@ os.environ["TRANSFORMERS_CACHE"] = "./models"
 ```bash
 curl -X POST -F "file=@progit.pdf" http://localhost:9000/upload
 ```
+
+> **Note:** For better OCR results, please check out my Docling video tutorial.
 
 ## Ask Questions About a PDF
 

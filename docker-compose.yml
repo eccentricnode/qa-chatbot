@@ -1,3 +1,4 @@
+version: '3'
 services:
   qdrant:
     image: qdrant/qdrant:latest
@@ -22,14 +23,18 @@ services:
     environment:
       - LOG_LEVEL=INFO
       - MODELS_PATH=/models
-      # - NVIDIA_VISIBLE_DEVICES=all
-      # - NVIDIA_DISABLE_REQUIRE=1 
-      # - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      # - CUDA_VISIBLE_DEVICES=0
       - USER_ID=1000
       - GROUP_ID=1000
     volumes:
       - ./models:/models:rw
-    # runtime: nvidia
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
     depends_on:
       - qdrant
     healthcheck:
