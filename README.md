@@ -1,3 +1,13 @@
+# AI Document Q&A System - Learning Project with Business Context
+**The Challenge I Explored**: Like many organizations, I've seen teams waste time searching through documents for specific information. Whether it's customer support agents digging through product manuals or employees hunting for policy details, document search is a common productivity drain that seemed like a good problem to tackle while learning AI implementation.
+
+**What I Built**: I created a document Q&A system using RAG architecture and vector databases to let users ask natural language questions about uploaded PDFs. While this was primarily a learning exercise to understand how modern AI tools work in practice, it demonstrates the type of practical business applications that AI can enable - from customer support knowledge bases to internal documentation systems. The project helped me understand both the technical implementation and the real-world considerations of deploying AI solutions in business contexts.
+
+
+### Here's a video discussing how it works --> [Turn Any PDF Into an Interactive Q&A Bot](https://www.youtube.com/watch?v=Wy0WV8L9Opw)
+
+## Installation Instructions
+
 ### 1. Install Python 3.12
 Ensure Python 3.12 is installed on your system. Check the version:
 ```bash
